@@ -41,7 +41,7 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import backend as K
-
+import json
 
 # dimensions of our images.
 img_width, img_height = 150, 150
@@ -50,7 +50,7 @@ train_data_dir = 'data/train'
 validation_data_dir = 'data/validation'
 nb_train_samples = 2000
 nb_validation_samples = 800
-epochs = 20 #50 by default
+epochs = 1 #50 by default
 batch_size = 16
 
 if K.image_data_format() == 'channels_first':
@@ -113,3 +113,9 @@ model.fit_generator(
     validation_steps=nb_validation_samples // batch_size)
 
 model.save_weights('first_try.h5')
+model.save("my_model.h5")
+# json_string = model.to_json()
+# with open('model.json','w') as outputFile:
+#     outputFile.write(json_string)
+# outputFile.close()
+    #json.dump(json_string,outputFile)
