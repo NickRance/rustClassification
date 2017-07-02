@@ -1,0 +1,14 @@
+
+Epochs:5, Steps 10, False negative: 7.59
+Epochs: 10, Steps 10, False Negative: 14.48
+Epochs: 10, Steps 100, False Negative: 1.44
+Epochs: 10, Steps 100, False Negative: 1.8
+
+JK All of the above are bullshit
+
+
+Steps:1000
+False Positive: 75.00
+True Positive: 83.61
+False Negative: 16.39
+True Negative: 25.00

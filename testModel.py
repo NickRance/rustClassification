@@ -10,3 +10,5 @@ MODEL_FILENAME = "my_model.h5"
 # model = model_from_json(data)
 model = load_model(MODEL_FILENAME)
 print(model)
+
+predictions = model.predict()

@@ -22,9 +22,9 @@ def flickr_walk(keyword, limit):
 		print(photo)
 		try:
 			url = photo.get('url_c')
-			writePath = outputPath + '/' + str(keyword)
+			writePath = outputPath + '/search/' + str(keyword)
 			validatePath(writePath)
-			urllib.request.urlretrieve(url, writePath +"/search/"+ keyword+'/'+ str(count) + ".jpg")
+			urllib.request.urlretrieve(url, writePath +"/"+ str(keyword)+'_'+ str(count) + ".jpg")
 			count += 1
 			if count > limit:
 				break
