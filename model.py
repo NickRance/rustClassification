@@ -53,7 +53,7 @@ MODEL_FILENAME = "my_model.h5"
 
 nb_train_samples = 1000
 nb_validation_samples = 500
-epochs = 10 #50 by default
+epochs = 50 #50 by default
 batch_size = 32 #16 by default
 
 if K.image_data_format() == 'channels_first':
@@ -149,9 +149,9 @@ def saveModel(model):
 	model.save("my_model.h5")
 
 
-model2 = modelFromFile()
-# model2 = retrain()
-# saveModel(model2)
+#model2 = modelFromFile()
+model2 = retrain()
+saveModel(model2)
 predictions = makePredictions(model2)
 #rounded = [round(x[0]) for x in predictions]
 falseNegativeCount = 0
